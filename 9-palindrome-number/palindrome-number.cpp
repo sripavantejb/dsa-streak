@@ -5,14 +5,16 @@ public:
         {
             return false;
         }
-        long long r = x;
+
+        long long  r = x;
         long long rev =0;
-        while(x!=0)
+        while(x > 0)
         {
-         int ld = x%10;
+         int last_digit = x%10;
           x = x/10;
-          rev = (rev*10) + ld;
+          rev = (rev*10) + last_digit;
         }
+
         return r == rev;
         
     }
