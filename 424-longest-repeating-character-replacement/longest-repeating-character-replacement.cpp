@@ -13,9 +13,9 @@ public:
             while((r-l+1) - maxFreq > k){
                 mpp[s[l]]--;
                 l++;
-                // if(mpp[l] == 0){
-                //     mpp.erase(s[l]);
-                // }
+                if(mpp[s[l]] == 0){
+                    mpp.erase(s[l]);
+                }
             }
             max_len = max(max_len, r-l+1);
         }
