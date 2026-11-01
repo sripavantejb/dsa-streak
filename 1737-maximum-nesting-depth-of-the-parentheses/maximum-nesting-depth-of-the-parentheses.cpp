@@ -1,20 +1,20 @@
 class Solution {
 public:
     int maxDepth(string s) {
-        int currentDepth =0;
-        int maxDepth = 0;
-        for(auto c: s){
+       
+        int current_depth = 0;
+        int max_depth = INT_MIN;
+
+        for(auto c : s){
             if(c == '('){
-                currentDepth++;
+                current_depth++;
             }else if(c == ')'){
-                currentDepth--;
+                current_depth--;
             }
-            maxDepth = max(currentDepth,maxDepth);
+
+            max_depth = max(current_depth, max_depth);
         }
-        return maxDepth;
-        
+
+    return max_depth;
     }
 };
-
-
-
