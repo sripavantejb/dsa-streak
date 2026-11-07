@@ -8,19 +8,16 @@ public:
         });
 
         int n = intervals.size();
-        int ans = 0;
+        int max_fit_intervals = 1;
         int prev_end = intervals[0][1];
 
         for(int i=1; i<n; i++){
-            if(intervals[i][0] < prev_end){
-                ans++;
-            }else{
+            if(intervals[i][0] >= prev_end){
+                max_fit_intervals++;
                 prev_end = intervals[i][1];
             }
-            
+
         }
-        
-        return ans;
-        
+        return n - max_fit_intervals;
     }
 };
