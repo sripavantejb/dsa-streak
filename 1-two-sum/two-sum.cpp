@@ -8,9 +8,9 @@ public:
             int complement = target - nums[i];
             if(mpp.find(complement) != mpp.end()){
                 return {mpp[complement], i};
+            }else{
+                mpp[nums[i]] = i;
             }
-            
-            mpp[nums[i]] = i;
 
 
         }
